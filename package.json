@@ -1,0 +1,17 @@
+{
+  "name": "vlsi_website",
+  "version": "1.0.0",
+  "description": "VLSI club website",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.8",
+    "express.js": "^1.0.0"
+  }
+}
