@@ -1,4 +1,5 @@
 //boiler plate code for starting a server
+require('dotenv').config()
 const express = require("express");
 const bodyParser = require("body-parser");
 const nodemailer = require('nodemailer');
@@ -34,13 +35,14 @@ app.post('/send-mail', (req, res) => {
   const section= req.body.section;
   const email= req.body.email;
   const phone= req.body.phone;
+  const pass=process.env.gmailPass;
 
   // Nodemailer configuration
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
       user: '20131a04l4@gvpce.ac.in',
-      pass: 'gvpcoe123'
+      pass: pass
     }
   });
 
