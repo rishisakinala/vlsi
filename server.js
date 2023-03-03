@@ -23,14 +23,26 @@ app.listen( port , function() {
 
 //setting up  get requests
 app.get("/",function (req,res){
-  res.render("registration");
+  res.redirect("/Vacancies");
 });
 
+app.get("/Vacancies",function (req,res){
+  res.render("Vacancies");
+});
+
+app.post('/registration', function(req, res) {
+  const value = req.body.btn;
+
+  res.render('registration', { role : value });
+});
 /*************************************************************************************/
 //setting up post requests
+
+
 app.post('/send-mail', (req, res) => {
   const name = req.body.name;
   const roll_number = req.body.roll_number;
+  const role =req.body.role;
   const branch = req.body.branch;
   const section= req.body.section;
   const email= req.body.email;
@@ -50,7 +62,7 @@ app.post('/send-mail', (req, res) => {
     from: '20131a04l4@gvpce.ac.in',
     to: '20131a04l4@gvpce.ac.in',
     subject: 'New message from VLSID Club registration form',
-    text: `Name: ${name}\nroll number: ${roll_number}\nBranch: ${branch}\nSection: ${section}\nEmail: ${email}\nPhone number: ${phone}`
+    text: `Name: ${name}\nroll number: ${roll_number}\nRole: ${role}\nBranch: ${branch}\nSection: ${section}\nEmail: ${email}\nPhone number: ${phone}`
   };
 
   // Send email
