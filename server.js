@@ -19,16 +19,16 @@ app.listen( port , function() {
 
 });
 
-const vacacantrole=["00","00","00","00","00","00"];
+const vacacantrole=["00","00","00","00","00","00","00","00","00"];
 /*************************************************************************************/
 
 //setting up  get requests
 app.get("/",function (req,res){
-  res.redirect("/Vacancies");
+  res.redirect("/vac2");
 });
 
-app.get("/Vacancies",function (req,res){
-  res.render("Vacancies",{vacacantrole: vacacantrole});
+app.get("/vac2",function (req,res){
+  res.render("vac2",{vacacantrole: vacacantrole});
 });
 app.get("/vac-com",(req, res)=>{
   res.render("vac-com");
@@ -85,17 +85,17 @@ app.post('/send-mail', (req, res) => {
 
 app.post("/update-vac",(req,res)=>{
 
-  if(vacacantrole.length){
+  // if(vacacantrole.length){
     vacacantrole.length=0;
-  }
+  // }
   const role =req.body;
 
 
-  [role.role0, role.role1, role.role2, role.role3, role.role4, role.role5].forEach(role => {
+  [role.role0, role.role1, role.role2, role.role3, role.role4, role.role5, role.role6, role.role7, role.role8].forEach(role => {
     if(role=="0" || role=="")
     vacacantrole.push("00");
     else
     vacacantrole.push(role);
 });
- res.redirect("vacancies");
+ res.redirect("vac2");
 });

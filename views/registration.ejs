@@ -16,6 +16,17 @@
                 <div class="card-body">
                     <h2 class="title">Registration Form for <%=role%> </h2>
                     <form method="post" action="/send-mail">
+                      
+                      <div class="row">
+                          <div class="col-2">
+                              <div class="input-group">
+                                  <label class="label" value="<%=role%>"> Role</label>
+                                  <input class="input--style-4 disabled" type="text" placeholder="<%=role%>" disabled >
+                                  <input type="hidden" name="role" value="<%=role%>">
+                              </div>
+                          </div>
+                        </div>
+
                         <div class="row">
                             <div class="col-2">
                                 <div class="input-group">
@@ -33,15 +44,7 @@
                               </div>
                           </div>
                         </div>
-                        <div class="row">
-                          <div class="col-2">
-                              <div class="input-group">
-                                  <label class="label" value="<%=role%>"> Role</label>
-                                  <input class="input--style-4 disabled" type="text" placeholder="<%=role%>" disabled >
-                                  <input type="hidden" name="role" value="<%=role%>">
-                              </div>
-                          </div>
-                        </div>
+
                         <div class="row">
                             <div class="col-2">
                                 <div class="input-group">
