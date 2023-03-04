@@ -24,11 +24,11 @@ const vacacantrole=["00","00","00","00","00","00","00","00","00"];
 
 //setting up  get requests
 app.get("/",function (req,res){
-  res.redirect("/vac2");
+  res.redirect("/vacancies");
 });
 
-app.get("/vac2",function (req,res){
-  res.render("vac2",{vacacantrole: vacacantrole});
+app.get("/vacancies",function (req,res){
+  res.render("vacancies",{vacacantrole: vacacantrole});
 });
 app.get("/vac-com",(req, res)=>{
   res.render("vac-com");
@@ -97,5 +97,5 @@ app.post("/update-vac",(req,res)=>{
     else
     vacacantrole.push(role);
 });
- res.redirect("vac2");
+ res.redirect("vacancies");
 });

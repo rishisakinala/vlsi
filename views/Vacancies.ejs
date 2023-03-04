@@ -2,101 +2,267 @@
 <html>
 <head>
 <title>Vacancies</title>
-<link rel="stylesheet"  type="text/css" href="/css/Vacancies.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="/css/Vacancies.css">
+
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
+<style type="text/css">
+*
+{
+padding: 0;
+margin: 0;
+font-family: 'po', sans-serif;
+}
 
+body
+{
+width: 100%;
+height: 300vh;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #f2f6f8;
+background-repeat: repeat;
+background-size: contain;
+
+background-attachment: fixed;
+
+}
+.box
+{
+    margin:100px;
+width: 350px;
+height: 450px;
+background-color: transparent;
+text-align: center;
+box-sizing: border-box;
+padding: 30px;
+border-radius: 20px;
+transition: 0.5s;
+margin-right: 20px;
+cursor: pointer;
+position:relative;
+margin-left: 30px;
+}
+.box:hover
+{
+box-shadow: 0px 0px 25px #999999;
+background-color:rgb(109, 235, 235);
+}
+.box h2
+{
+font-size: 22px;
+font-weight: 700;
+letter-spacing: 2px;
+}
+.box p
+{
+font-size: 16px;
+font-weight: 400;
+line-height: 30px;
+color: #151414;
+padding-top: 15px;
+}
+.box button
+{
+width: 180px;
+height: 55px;
+border-radius: 40px;
+border: none;
+margin-left: 20px;
+color: #fbfbfb;
+font-weight: bolder;
+background-color: #fe4c1c;
+font-size: 18px;
+border: 1px solid #d5502b;
+cursor:pointer;
+box-shadow: 12px 12px 20px 0 rgb(254 76 28 / 30%);
+transition: 0.5s;
+position: absolute;
+overflow: hidden;
+padding: 1px;
+top: 480px;
+left: 65px;
+display: flex;
+justify-content: center;
+align-items: center;
+visibility: hidden;
+}
+.box button:before
+{
+content: '';
+position: absolute;
+width: 70%;
+height: 55px;
+top: 0;
+transition: .8s;
+left: -150%;
+bottom: 0;
+background: linear-gradient(to left, rgba(255, 255, 255, 0.25), transparent);
+}
+.box button:hover
+{
+box-shadow: none;
+}
+.box button:hover:before
+{
+left: 70%;
+}
+.box:hover button
+{
+position: absolute;
+top: 420px;
+left: 65px;
+transition: 0.5s;
+visibility: visible;
+}
+.box ion-icon
+{
+background-color: #fff;
+padding: 10px;
+border-radius: 50%;
+color: #ee582e;
+margin-left: 10px;
+}
+</style>
 <body>
 
 
 <div>
-    <div class="card" style="margin-left :80px;">
-        <img src="a1.jpg" class="card-img" style="margin-left :5px;height:350px;width: 390px;" alt="">
-        <div class="card-body" >
-             <centre><h1 class="card-title">STEP:1</h1></centre><br>
-
-        <h2 class="card-info">First you have to fill the form on your respective interests domain mentioned below </h2>
+    <div class="card">
+        <div class="face face--front" style="margin-top: 37px;"><img src="/images/application.jpg"  height="300px" width="300px" ></img></div>
+        <div class="face face--back"><h1><br>STEP-1</h1>
+        <h4 style="padding:10px;">First you have to fill the form on
+             your respective interests mentioned below and submit the form through join us</h4></div>
       </div>
-     </div>
-<div class="box">
+<div class="box" >
 
-<h1>Web Designer</h1>
+<h1>Web Designer</h1><BR>
 <p>Web designers plan, create  web pages, many of which combine text with sounds, pictures, graphics and video clips.
     A web designer is responsible forcreating the design and layout of a website or web pages</p>
     <p><h3>Vacancies - <%=vacacantrole[0]%></h3></p>
-  <form action="/registration" method="post">
-    <input type="hidden" name="vac" value="<%=vacacantrole[0]%>">
-    <button class="btn" name="btn" value="Web Designer" >Join Us</a><ion-icon name="arrow-forward-outline"></ion-icon></button>
-  </form>
+      <form action="/registration" method="post">
+        <input type="hidden" name="vac" value="<%=vacacantrole[0]%>">
+        <button class="btn" name="btn" value="Web Designer" >Join Us</a><ion-icon name="arrow-forward-outline"></ion-icon></button>
+      </form>
 </div>
-<div class="box">
+<div class="box" >
 
-<h1>Feedback Team</h1>
-<p>Start promoting your product through Content Marketing and boost your Business to next level.</p>
-<p><h3>Vacancies - <%=vacacantrole[1]%></h3></p>
-<form action="/registration" method="post">
-  <input type="hidden" name="vac" value="<%=vacacantrole[1]%>">
-  <button class="btn" name="btn" value="Feedback Team" >Join Us</a><ion-icon name="arrow-forward-outline"></ion-icon></button>
-</form>
-</div>
-<div class="box">
+<h1>Feedback Team</h1><BR>
+<p>Web designers plan, create  web pages, many of which combine text with sounds, pictures, graphics and video clips.
+    A web designer is responsible forcreating the design and layout of a website or web pages.</p>
+    <p><h3>Vacancies - <%=vacacantrole[1]%></h3></p>
+    <form action="/registration" method="post">
+      <input type="hidden" name="vac" value="<%=vacacantrole[1]%>">
+      <button class="btn" name="btn" value="Feedback Team" >Join Us</a><ion-icon name="arrow-forward-outline"></ion-icon></button>
+    </form>
+    </div>
+<div class="box" >
+<h1>Fundraising Team</h1><BR>
+<p>Web designers plan, create  web pages, many of which combine text with sounds, pictures, graphics and video clips.
+    A web designer is responsible forcreating the design and layout of a website or web pages.</p>
+    <p><h3>Vacancies - <%=vacacantrole[2]%></h3></p>
+    <form action="/registration" method="post">
+      <input type="hidden" name="vac" value="<%=vacacantrole[2]%>">
+      <button class="btn" name="btn" value="Fundraising Team" >Join Us</a><ion-icon name="arrow-forward-outline"></ion-icon></button>
+    </form>
+    </div>
 
-<h1>Fundraising Team</h1>
-<p>Get more website traffic, more customers, and more online visibility with powerful SEO ss.</p>
-<p><h3>Vacancies - <%=vacacantrole[2]%></h3></p>
-<form action="/registration" method="post">
-  <input type="hidden" name="vac" value="<%=vacacantrole[2]%>">
-  <button class="btn" name="btn" value="Fundraising Team" >Join Us</a><ion-icon name="arrow-forward-outline"></ion-icon></button>
-</form>
-</div>
 </div>
 
 <div>
+    <h1 style="margin-left:30px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">RECRUITMENT PROCESS</h1>
 
-    <div class="card" style="margin-left :50px;" >
-        <img src="e1.webp" style="margin-left :5px;height:350px;width: 390px;" class="card-img" alt="">
-        <div class="card-body">
-             <h1 class="card-title">STEP:2</h1><br>
+    <div class="card">
+        <div class="face face--front"><img src="/images/exam.png"  height="300px" width="300px" ></img></div>
+        <div class="face face--back"><h1><br>STEP-2</h1>
+        <h4 style="padding:10px;">Based on the requirements in the club we will notify you and the exam will be on Digital,
+            Analog, Networks and C Language</h4></div>
+    </div>
+<div class="box" style="margin-top: 10px;">
 
-             <h2 class="card-info">Based on the availability of vacancies in the club we will notify you and the exam will be on Digital,
-                Analog, Networks and C Lamguage</h2>
-        </div>
-     </div>
-<div class="box">
-
-    <h1>Documentation</h1>
+    <h1>Documentation</h1><BR>
     <p>Web designers plan, create  web pages, many of which combine text with sounds, pictures, graphics and video clips.
         A web designer is responsible forcreating the design and layout of a website or web pages</p>
         <p><h3>Vacancies - <%=vacacantrole[3]%></h3></p>
-        <form action="/registration" method="post">
-          <input type="hidden" name="vac" value="<%=vacacantrole[3]%>">
-          <button class="btn" name="btn" value="Documentation" >Join Us</a><ion-icon name="arrow-forward-outline"></ion-icon></button>
-        </form>
-    </div>
-    <div class="box">
+<form action="/registration" method="post">
+  <input type="hidden" name="vac" value="<%=vacacantrole[3]%>">
+  <button class="btn" name="btn" value="Documentation" >Join Us</a><ion-icon name="arrow-forward-outline"></ion-icon></button>
+</form>
+</div>
 
-    <h1>News Updates</h1>
-    <p>Start promoting your product through Content Marketing and boost your Business to next level.</p>
-    <p><h3>Vacancies - <%=vacacantrole[4]%></h3></p>
+    <div class="box" >
+
+    <h1>News Updates</h1><BR>
+    <p>Web designers plan, create  web pages, many of which combine text with sounds, pictures, graphics and video clips.
+        A web designer is responsible forcreating the design and layout of a website or web pages.</p>
+        <p><h3>Vacancies - <%=vacacantrole[4]%></h3></p>
     <form action="/registration" method="post">
       <input type="hidden" name="vac" value="<%=vacacantrole[4]%>">
       <button class="btn" name="btn" value="News Updates" >Join Us</a><ion-icon name="arrow-forward-outline"></ion-icon></button>
     </form>
     </div>
-    <div class="box">
 
-    <h1>Promotions Team</h1>
-    <p>Get more website traffic, more customers, and more online visibility with powerful SEO ss.</p>
-    <p><h3>Vacancies - <%=vacacantrole[5]%></h3></p>
+    <div class="box" >
+
+    <h1>Promotions Team</h1><BR>
+    <p>Web designers plan, create  web pages, many of which combine text with sounds, pictures, graphics and video clips.
+        A web designer is responsible forcreating the design and layout of a website or web pages</p>
+        <p><h3>Vacancies - <%=vacacantrole[5]%></h3></p>
     <form action="/registration" method="post">
       <input type="hidden" name="vac" value="<%=vacacantrole[5]%>">
       <button class="btn" name="btn" value="Promotions Team" >Join Us</a><ion-icon name="arrow-forward-outline"></ion-icon></button>
     </form>
     </div>
+
 </div>
+
+<div>
+    <div class="card">
+        <div class="face face--front"  style="margin-top: 37px;"><img src="/images/Interview.jpg" height="300px" width="300px" ></img></div>
+        <div class="face face--back"><h1><br>STEP-3</h1>
+            <h4 style="padding:10px;">After the exam qualification there will be an interview on Digital,
+                Analog,Networks and C Programming domain</h4></div>
+      </div>
+    <div class="box" >
+
+    <h1>Web Handling</h1><BR>
+    <p>Web designers plan, create  web pages, many of which combine text with sounds, pictures, graphics and video clips.
+        A web designer is responsible forcreating the design and layout of a website or web pages</p>
+        <p><h3>Vacancies - <%=vacacantrole[6]%></h3></p>
+<form action="/registration" method="post">
+  <input type="hidden" name="vac" value="<%=vacacantrole[6]%>">
+  <button class="btn" name="btn" value="Web Handling" >Join Us</a><ion-icon name="arrow-forward-outline"></ion-icon></button>
+</form>
+</div>
+
+    <div class="box" >
+
+    <h1>Organising</h1><BR>
+    <p>Web designers plan, create  web pages, many of which combine text with sounds, pictures, graphics and video clips.
+        A web designer is responsible forcreating the design and layout of a website or web pages</p>
+        <p><h3>Vacancies - <%=vacacantrole[7]%></h3></p>
+    <form action="/registration" method="post">
+      <input type="hidden" name="vac" value="<%=vacacantrole[7]%>">
+      <button class="btn" name="btn" value="Organising Team" >Join Us</a><ion-icon name="arrow-forward-outline"></ion-icon></button>
+    </form>
+    </div>
+
+    <div class="box" >
+
+    <h1>Club Member</h1><BR>
+    <p>Web designers plan, create  web pages, many of which combine text with sounds, pictures, graphics and video clips.
+        A web designer is responsible forcreating the design and layout of a website or web pages</p>
+        <p><h3>Vacancies - <%=vacacantrole[8]%></h3></p>
+    <form action="/registration" method="post">
+      <input type="hidden" name="vac" value="<%=vacacantrole[8]%>">
+      <button class="btn" name="btn" value="Club Member" >Join Us</a><ion-icon name="arrow-forward-outline"></ion-icon></button>
+    </form>
+    </div>
+    </div>
+
+
 </body>
 </html>
