@@ -88,7 +88,12 @@
                             </div>
                         </div>
                       <div class="p-t-15">
-                            <button class="btn" type="submit">Submit</button>
+                          <%  if( vac == 00){%>
+                            <button class="btn btn-disabled" type="submit" disabled>Submit</button>
+                            <p>Currently there is no vacancy in <%=role%> role.<br>Contact ous of more information.</p>
+                          <% } else { %>
+                           <button class="btn" type="submit">Submit</button>
+                          <% } %>
                         </div>
                     </form>
                 </div>
