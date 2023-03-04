@@ -19,21 +19,25 @@ app.listen( port , function() {
 
 });
 
+const vacacantrole=["00","00","00","00","00","00","00","00","00"];
 /*************************************************************************************/
 
 //setting up  get requests
 app.get("/",function (req,res){
-  res.redirect("/Vacancies");
+  res.redirect("/vacancies");
 });
 
-app.get("/Vacancies",function (req,res){
-  res.render("Vacancies");
+app.get("/vacancies",function (req,res){
+  res.render("vacancies",{vacacantrole: vacacantrole});
+});
+app.get("/vac-com",(req, res)=>{
+  res.render("vac-com");
 });
 
 app.post('/registration', function(req, res) {
   const value = req.body.btn;
-
-  res.render('registration', { role : value });
+  const vac=req.body.vac;
+  res.render('registration', { role : value, vac: vac });
 });
 /*************************************************************************************/
 //setting up post requests
@@ -61,8 +65,8 @@ app.post('/send-mail', (req, res) => {
   const mailOptions = {
     from: '20131a04l4@gvpce.ac.in',
     to: '20131a04l4@gvpce.ac.in',
-    subject: 'New message from VLSID Club registration form',
-    text: `Name: ${name}\nroll number: ${roll_number}\nRole: ${role}\nBranch: ${branch}\nSection: ${section}\nEmail: ${email}\nPhone number: ${phone}`
+    subject: `Recruitment: New application recieved`,
+    text: `VLSID Club registration form\n\nName: ${name}\nroll number: ${roll_number}\nRole: ${role}\nBranch: ${branch}\nSection: ${section}\nEmail: ${email}\nPhone number: ${phone}`
   };
 
   // Send email
@@ -75,4 +79,23 @@ app.post('/send-mail', (req, res) => {
       res.send('Message sent successfully');
     }
   });
+});
+
+
+
+app.post("/update-vac",(req,res)=>{
+
+  // if(vacacantrole.length){
+    vacacantrole.length=0;
+  // }
+  const role =req.body;
+
+
+  [role.role0, role.role1, role.role2, role.role3, role.role4, role.role5, role.role6, role.role7, role.role8].forEach(role => {
+    if(role=="0" || role=="")
+    vacacantrole.push("00");
+    else
+    vacacantrole.push(role);
+});
+ res.redirect("vacancies");
 });
