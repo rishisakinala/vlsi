@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>FAQ</title>
+    <link rel="stylesheet"  type="text/css" href="/css/FAQ.css">
+</head>
+<body>
+  <%- include('partials/navbar'); -%>
+    <h1 style="color:rgb(241, 243, 243); text-align:center; margin-top:0;">Frequently Asked Questions</h1>
+    <div class="layout">
+        <div class="accordion">
+            <div class="accordion__question">
+                <p>What is VLSI?</p>
+            </div>
+            <div class="accordion__answer">
+                <p>Very-large-scale integration (VLSI) is the process of creating an integrated circuit (IC) by combining thousands of transistors into a single chip.
+                </p>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="accordion__question">
+                <p>What is the Fullform of VLSI?</p>
+            </div>
+            <div class="accordion__answer">
+                <p>Very Large Scale Integration</p>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="accordion__question">
+                <p>Which software is used for VLSI? </p>
+            </div>
+            <div class="accordion__answer">
+                <p>Software tools: Synopsys, Cadence, Mentor Graphics, Xilinx, Keysight ADS, Keysight IC-Cap, Synopsys Advanced TCAD</p>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="accordion__question">
+                <p>What is the purpose of VLSI?</p>
+            </div>
+            <div class="accordion__answer">
+                <p>VLSI is mainly used to design electronic components like microprocessors and memory chips, which require millions of transistors.</p>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="accordion__question">
+                <p>What are the steps involved in VLSI?</p>
+            </div>
+            <div class="accordion__answer">
+                <p><centre><img src="images/Process.png"></centre></p>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="accordion__question">
+                <p>What are the applications of VLSI in real life?</p>
+            </div>
+            <div class="accordion__answer">
+                <p>VLSI is mainly used to design electronic components like microprocessors and memory chips, which require millions of transistors.</p>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="accordion__question">
+                <p>What is the latest technology in VLSI?</p>
+            </div>
+            <div class="accordion__answer">
+                <p>The latest technology in VLSI is the integration and application of Artificial Intelligence and Machine Learning</p>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="accordion__question">
+                <p>What are the types of VLSI?</p>
+            </div>
+            <div class="accordion__answer">
+                <p>VLSI Design is divided into two major groups as programmable design and nonprogrammable designs.</p>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="accordion__question">
+                <p>Which language is used in VLSI?</p>
+            </div>
+            <div class="accordion__answer">
+                <p>In front end design, VLSI programming is done using hardware descriptive languages such as Very High-Speed Integrated Circuit Hardware Description Language (VHDL), Verilog, and System Verilog.</p>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="accordion__question">
+                <p>What is the full form of VHDL?</p>
+            </div>
+            <div class="accordion__answer">
+                <p>The Very High Speed Integrated Circuit (VHSIC) Hardware Description Language (VHDL) is a language that describes the behavior of electronic circuits, most commonly digital circuits.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+            let answers=document.querySelectorAll(".accordion");
+            answers.forEach((event,i)=>{
+                 var clickedEvent=event;
+               clickedEvent.addEventListener('click',()=>{
+                    if(clickedEvent.classList.contains("active")){
+                       clickedEvent.classList.remove("active");
+                    }
+                    else{
+                       clickedEvent.classList.add("active");
+                    }
+
+                    answers.forEach((notevent) => {
+                       if(notevent!=clickedEvent)
+                      notevent.classList.remove("active");
+                    });
+
+                });
+            });
+
+
+        </script>
+</body>
+</html>

@@ -235,3 +235,8 @@ input {
     padding: 50px 40px;
   }
 }
+
+.navres{
+  position: relative;
+  top:-11em;
+}

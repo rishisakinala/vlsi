@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/css/ourTeam.css">
+<style>
+img{
+ border-radius:50%;
+ width: 100%;
+ border:5px solid rgb(18, 18, 19);
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+}
+html {
+ box-sizing: border-box;
+}
+*, *:before, *:after {
+ box-sizing: inherit;
+}
+.column {
+ float: left;
+ width: 33.3%;
+ margin-bottom: 16px;
+ padding: 0 8px;
+}
+.column_2{
+ float:left;
+ width: 20%;
+ height: 30%;
+ margin-bottom: 16px;
+ padding: 0 8px;
+}
+@media screen and (max-width: 650px) {
+ .column {
+ width: 100%;
+ display: block;
+ }
+ }
+
+.card {
+box-shadow: 0 0 8px 0 #353839;
+width: fit-content;
+overflow:hidden;
+border-radius: 20px;
+border:8px solid #e9e9f3;
+position:relative;
+}
+.container {
+ padding: 0 8px;
+ height:fit-content;
+ width:fit-content;
+ font-size: 1vw;
+}
+.container::after, .row::after {
+ content: "";
+ clear: both;
+ display: table;
+}
+.title {
+ color: rgb(4, 5, 5);
+}
+.button:hover {
+ background-color: #555;
+}
+</style>
+</head>
+<body>
+  <%- include('partials/navbar'); -%>
+<h2 class="title"> "Meet The alumin members" </h2>
+<br>
+<div class="row">
+ <div class="column">
+ <div class="card">
+    <a href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+ <img src="dora.jpg" alt="Workplace" style="width:256px;height:256px;">
+ <div class="container">
+ <h2>SAI VENKAT</h2>
+ <p class="title">CEO & Founder</p>
+ <p>Some text that describes me.</p>
+ <p>example@example.com</p>
+ <div class="card-body">
+ <h1 class="card-title"><b>alumin std</b></h1>
+ <p class="card-sub-title">position</p>
+ <p class="card-info">I am very happy regarding to the hope in vlsi.</p>
+ <button class="card-btn">contact</button>
+ </div>
+ </div>
+ </a>
+ </div>
+ </div>
+ <div class="column">
+ <div class="card">
+    <a href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+ <img src="dora_2.jpg" alt="Workplace" style="width:256px;height:256px;">
+ <div class="container">
+ <h2>GOWTHAMI</h2>
+ <p class="title">EXECUTOR</p>
+ <p>Some text that describes me </p>
+ <p>example@example.com</p>
+ <div class="card-body">
+ <h1 class="card-title"><b>alumin std</b></h1>
+ <p class="card-sub-title">position</p>
+ <p class="card-info">I am very happy regarding to the hope in vlsi.</p>
+ <button class="card-btn">contact</button>
+ </div>
+ </div>
+ </a>
+ </div>
+ </div>
+ <div class="column">
+ <div class="card">
+    <a href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+ <img src="NOBITHA.jpg" alt="Workplace" style="width:256px;height:256px;">
+ <div class="container">
+ <h2>NOBITHA</h2>
+ <p class="title">Designer</p>
+ <p>Some text that describes me.</p>
+ <p>example@example.com</p>
+ <div class="card-body">
+ <h1 class="card-title"><b>alumin std</b></h1>
+ <p class="card-sub-title">position</p>
+ <p class="card-info">I am very happy regarding to the hope in vlsi.</p>
+ <button class="card-btn">contact</button>
+ </div>
+ </div>
+ </a>
+ </div>
+ </div>
+</div>
+
+<br>
+<div class="row">
+    <div class="column_2">
+    <div class="card">
+    <img src="dora.jpg" alt="Workplace" style="width:178px;height:178px;">
+    <div class="container">
+    <h2>SAI VENKAT</h2>
+    <p class="title">CEO & Founder</p>
+    <p>Some text that describes me.</p>
+    <p>example@example.com</p>
+    <p><button class="button">Contact</button></p>
+    </div>
+    </div>
+    </div>
+    <div class="column_2">
+    <div class="card">
+    <img src="dora_2.jpg" alt="Workplace" style="width:178px;height:178px;">
+    <div class="container">
+    <h2>GOWTHAMI</h2>
+    <p class="title">EXECUTOR</p>
+    <p>Some text that describes me </p>
+    <p>example@example.com</p>
+    <p><button class="button">Contact</button></p>
+    </div>
+    </div>
+    </div>
+    <div class="column_2">
+    <div class="card">
+    <img src="NOBITHA.jpg" alt="Workplace" style="width:178px;height:178px;">
+    <div class="container">
+    <h2>NOBITHA</h2>
+    <p class="title">Designer</p>
+    <p>Some text that describes me.</p>
+    <p>example@example.com</p>
+    <p><button class="button">Contact</button></p>
+    </div>
+    </div>
+    </div>
+</div>
+</body>
+</html>

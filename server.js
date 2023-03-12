@@ -24,7 +24,7 @@ const vacacantrole=["00","00","00","00","00","00","00","00","00"];
 
 //setting up  get requests
 app.get("/",function (req,res){
-  res.redirect("/vacancies");
+  res.render("index");
 });
 
 app.get("/vacancies",function (req,res){
@@ -33,6 +33,16 @@ app.get("/vacancies",function (req,res){
 app.get("/vac-com",(req, res)=>{
   res.render("vac-com");
 });
+app.get("/FAQ",(req,res)=>{
+  res.render("FAQ");
+})
+app.get("/workshopmain",(req,res)=>{
+  res.render("workshopmain");
+})
+app.get("/ourTeam",(req,res)=>{
+  res.render("ourTeam");
+})
+
 
 app.post('/registration', function(req, res) {
   const value = req.body.btn;
